@@ -16,12 +16,8 @@ st.info("Hehe")
     
 col1,col2 = st.columns(2)
 
-with col1:
-  st.header("Take a picture")
-  st.write("Upload an image or take a picture using your webcam")
-  st.camera_input('Cheer')
-  
-with col2:
-  st.header("Upload an image")
-  st.write("Upload an image from your local machine")
-  st.file_uploader("Upload an image")
+if col1.button("Button 1",use_container_width=True):
+    enable = st.checkbox("Enable",value=False)
+    image = st.camera_input('Cheer up!')
+if col2.button("Button 2",use_container_width=True):
+    st.write("Button 2 is clicked")
