@@ -1,4 +1,5 @@
 import streamlit as st
+import io
 
 st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", layout="wide", initial_sidebar_state='auto')
 
@@ -39,9 +40,25 @@ with col2:
   else:
     img = st.file_uploader('Upload a picture')
     
-if img:
-  st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
+# if img:
+#   st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
   
+  if st.button('Review Image'):
+    if img is not None:
+      st.write("Image Details:")
+      st.write(f"Format: {img.type}")
+      st.write(f"Size: {img.size} bytes")
+      if method == 'Upload a picture':
+        st.write(f"Filename: {img.name}")
+    else:
+      st.warning("Please provide an image first")
+  import PIL.Image
+  
+  if img is not None:
+    img_file = io.BytesIO(img.getvalue())
+    image = PIL.Image.open(img_file)
+    st.write("Image dimensions:", image.size)
+    st.write("Image mode:", image.mode)
 st.subheader("Selecting Model")
 model = st.selectbox('Select Model',options=['VGG16','ResNet50','InceptionV3'])
 
