@@ -7,7 +7,7 @@ primaryColor = '#7792E3'
 backgroundColor = '#f0f4fa'
 
 # Background color for sidebar and most interactive widgets
-secondaryBackgroundColor = '#B9F1C0'
+secondaryBackgroundColor = '#a2c0f5'
 
 # Color used for almost all text
 textColor = '#070808'
@@ -15,4 +15,4 @@ textColor = '#070808'
 # Font family for all text in the app, except code blocks
 # Accepted values (serif | sans serif | monospace) 
 # Default: "sans serif"
-font = "sans serif"
+font = "monospace"
