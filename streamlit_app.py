@@ -11,7 +11,7 @@ hide_streamlit_style = """
 	footer {visibility: hidden;}
   </style>
 """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
+# st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
 
 page_bg_img = """
 <style>
@@ -22,6 +22,7 @@ page_bg_img = """
 <style>
 
 """
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Image Retrieval Program")
 st.info("This program allows you to upload an image or take a picture using your camera and retrieve similar images from the database using different models.")
