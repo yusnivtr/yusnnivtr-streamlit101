@@ -11,20 +11,26 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 # """
 # st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
 
-st.header("Starting Image Retrieval Program")
+st.title("Image Retrieval Program")
+st.info("Hehe")
 
-with st.expander("Input Image"):
-    col1,col2 = st.columns(2)
-    if col1.button('Take a photo',use_container_width=True):
-        st.write("Take a photo")
-        # enable = st.checkbox("Enable for camera")
-        image = st.camera_input('Cheer up! Smile for the camera')
-        if image:
-          st.write("You look great!")
-          st.image(image)
-    if col2.button('Upload a photo',use_container_width=True):
-        st.write("Upload a photo")
-        image = st.file_uploader("Upload an image")
-        
+if "vis" not in st.session_state:
+    st.session_state.vis = False
+    st.session_state.visibility = "visible"
     
-  
+col1,col2 = st.columns([1,1])
+with col1:
+  st.checkbox("Disable selectbox widget", key="disabled")
+  st.radio(
+      "Set selectbox label visibility 👉",
+      key="visibility",
+      options=["visible", "hidden", "collapsed"],
+  )
+
+with col2:
+  option = st.selectbox(
+      "How would you like to be contacted?",
+      ("Email", "Home phone", "Mobile phone"),
+      label_visibility=st.session_state.visibility,
+      disabled=st.session_state.disabled,
+  )
