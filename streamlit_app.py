@@ -13,24 +13,15 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 
 st.title("Image Retrieval Program")
 st.info("Hehe")
-
-if "vis" not in st.session_state:
-    st.session_state.vis = False
-    st.session_state.visibility = "visible"
     
-col1,col2 = st.columns([1,1])
-with col1:
-  st.checkbox("Disable selectbox widget", key="disabled")
-  st.radio(
-      "Set selectbox label visibility 👉",
-      key="visibility",
-      options=["visible", "hidden", "collapsed"],
-  )
+col1,col2 = st.columns(2)
 
+with col1:
+  st.header("Take a picture")
+  st.write("Upload an image or take a picture using your webcam")
+  st.camera_input('Cheer')
+  
 with col2:
-  option = st.selectbox(
-      "How would you like to be contacted?",
-      ("Email", "Home phone", "Mobile phone"),
-      label_visibility=st.session_state.visibility,
-      disabled=st.session_state.disabled,
-  )
+  st.header("Upload an image")
+  st.write("Upload an image from your local machine")
+  st.file_uploader("Upload an image")
