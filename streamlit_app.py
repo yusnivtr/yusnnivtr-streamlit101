@@ -18,7 +18,7 @@ with st.expander("Upload Image"):
     if col1.button('Take a photo',use_container_width=True):
         st.write("Take a photo")
         enable = st.checkbox("Enable for camera")
-        image = st.camera_input('Cheer up! Smile for the camera',use_container_width=True,disabled=not enable)
+        image = st.camera_input('Cheer up! Smile for the camera',disabled=not enable)
     if col2.button('Upload a photo',use_container_width=True):
         st.write("Upload a photo")
         image = st.file_uploader("Upload an image", type=['jpg','jpeg','png'],use_container_width=True)
