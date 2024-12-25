@@ -13,8 +13,8 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 
 st.header("Starting Image Retrieval Program")
 
-with st.expander("Upload Image"):
-    col1,col2 = st.columns(2,vertical_alignment='center')
+with st.expander("Input Image"):
+    col1,col2 = st.columns(2)
     if col1.button('Take a photo',use_container_width=True):
         st.write("Take a photo")
         enable = st.checkbox("Enable for camera")
