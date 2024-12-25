@@ -24,7 +24,7 @@ st.markdown(
 )
 
 st.title("Image Retrieval Program")
-st.info("Hehe")
+st.info("This program allows you to upload an image or take a picture using your camera and retrieve similar images from the database using different models.")
 
 st.subheader("Input Image")
 col1, col2 = st.columns([1, 3])
