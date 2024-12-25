@@ -17,7 +17,7 @@ with st.expander("Input Image"):
     col1,col2 = st.columns(2)
     if col1.button('Take a photo',use_container_width=True):
         st.write("Take a photo")
-        enable = st.checkbox("Enable for camera")
+        # enable = st.checkbox("Enable for camera")
         image = st.camera_input('Cheer up! Smile for the camera')
         if image:
           st.write("You look great!")
