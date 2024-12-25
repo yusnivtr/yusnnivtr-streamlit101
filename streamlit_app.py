@@ -28,6 +28,6 @@ with col2:
   else:
     img = st.file_uploader('Upload a picture')
     
-  if img:
-    st.image(img, caption='Uploaded Image', use_column_width=True)
+if img:
+  st.image(img, caption='Uploaded Image', use_container_width=True)
 
