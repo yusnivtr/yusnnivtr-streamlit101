@@ -2,4 +2,4 @@ streamlit
 numpy
 pandas
 torch
-camera-input-live
+streamlit-camera-input-live
