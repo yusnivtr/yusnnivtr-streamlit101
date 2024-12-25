@@ -12,16 +12,16 @@ hide_streamlit_style = """
   </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://www.nippon.com/en/ncommon/contents/japan-topics/601750/601750.jpg");
-    }
-   </style>
-    """,
-    unsafe_allow_html=True
-)
+
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]{
+  background-image: url("https://images.unsplash.com/photo-1575108921207-e6fca0c7dcf5?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+}
+<style>
+
+"""
 
 st.title("Image Retrieval Program")
 st.info("This program allows you to upload an image or take a picture using your camera and retrieve similar images from the database using different models.")
