@@ -24,6 +24,6 @@ with st.expander("Upload Image"):
           st.image(image)
     if col2.button('Upload a photo',use_container_width=True):
         st.write("Upload a photo")
-        image = st.file_uploader("Upload an image", type=['jpg','jpeg','png'],use_container_width=True)
+        image = st.file_uploader("Upload an image")
     
   
