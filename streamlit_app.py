@@ -11,20 +11,20 @@ hide_streamlit_style = """
 	footer {visibility: hidden;}
   </style>
 """
-# st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
 
-page_bg_img = """
-<style>
-[data-testid="stAppViewContainer"]{
-  background-image: url("https://plus.unsplash.com/premium_photo-1671995576541-a63078fa3063?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-}
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-<style>
+# page_bg_img = """
+# <style>
+# [data-testid="stAppViewContainer"]{
+#   background-image: url("https://plus.unsplash.com/premium_photo-1671995576541-a63078fa3063?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+#   background-size: cover;
+# }
+# #MainMenu {visibility: hidden;}
+# footer {visibility: hidden;}
+# <style>
 
-"""
-st.markdown(page_bg_img, unsafe_allow_html=True)
+# """
+# st.markdown(page_bg_img, unsafe_allow_html=True)
 
 st.title("Image Retrieval Program")
 st.info("This program allows you to upload an image or take a picture using your camera and retrieve similar images from the database using different models.")
