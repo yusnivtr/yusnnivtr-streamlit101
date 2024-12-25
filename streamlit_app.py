@@ -16,8 +16,9 @@ st.info("Hehe")
     
 col1,col2 = st.columns(2)
 
+enable = st.checkbox("Enable",value=False)
 if col1.button("Button 1",use_container_width=True):
-    enable = st.checkbox("Enable",value=False)
-    image = st.camera_input('Cheer up!')
+    if enable:
+        image = st.camera_input('Cheer up!')
 if col2.button("Button 2",use_container_width=True):
     st.write("Button 2 is clicked")
