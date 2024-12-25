@@ -25,6 +25,5 @@ with col2:
   if method == 'Take a picture':
     enable = st.checkbox('Enable Camera')
     img = st.camera_input('Take a picture',disabled= not enable)
-    st.image(img)
   else:
     st.file_uploader('Upload a picture')
