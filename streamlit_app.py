@@ -14,7 +14,7 @@ st.markdown(
     """
     <style>
     .reportview-container {
-        background: url("https://deadline.com/wp-content/uploads/2021/02/hatsune-miku.jpg");
+        background: url("https://www.nippon.com/en/ncommon/contents/japan-topics/601750/601750.jpg");
     }
    </style>
     """,
