@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", layout="centered", initial_sidebar_state='auto')
+st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", layout="wide", initial_sidebar_state='auto')
 
 # hide the part of the code, as this is just for adding some custom CSS styling but not a part of the main idea 
 hide_streamlit_style = """
