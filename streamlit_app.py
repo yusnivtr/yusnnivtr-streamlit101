@@ -14,11 +14,17 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 st.title("Image Retrieval Program")
 st.info("Hehe")
     
-col1,col2 = st.columns(2)
+col1, col2 = st.columns(2)
 
-enable = st.checkbox("Enable",value=False)
-if col1.button("Button 1",use_container_width=True):
-    if enable:
-        image = st.camera_input('Cheer up!')
-if col2.button("Button 2",use_container_width=True):
-    st.write("Button 2 is clicked")
+method = 'Take a picture'
+
+with col1:
+  method = st.radio('Select Input method',options=['Take a picture','Upload a picture'])
+  
+with col2:
+  if method == 'Take a picture':
+    enable = st.checkbox('Enable Camera')
+    img = st.camera_input('Take a picture',disabled= not enable)
+    st.image(img)
+  else:
+    st.file_uploader('Upload a picture')
