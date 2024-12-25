@@ -26,4 +26,8 @@ with col2:
     enable = st.checkbox('Enable Camera')
     img = st.camera_input('Take a picture',disabled= not enable)
   else:
-    st.file_uploader('Upload a picture')
+    img = st.file_uploader('Upload a picture')
+    
+  if img:
+    st.image(img, caption='Uploaded Image', use_column_width=True)
+
