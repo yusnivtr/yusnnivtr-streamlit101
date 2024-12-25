@@ -43,22 +43,32 @@ with col2:
 # if img:
 #   st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
   
-  if st.button('Review Image'):
-    if img is not None:
-      st.write("Image Details:")
-      st.write(f"Format: {img.type}")
-      st.write(f"Size: {img.size} bytes")
-      if method == 'Upload a picture':
-        st.write(f"Filename: {img.name}")
-    else:
-      st.warning("Please provide an image first")
-  import PIL.Image
+  # if st.button('Review Image'):
+  #   if img is not None:
+  #     st.write("Image Details:")
+  #     st.write(f"Format: {img.type}")
+  #     st.write(f"Size: {img.size} bytes")
+  #     if method == 'Upload a picture':
+  #       st.write(f"Filename: {img.name}")
+  #   else:
+  #     st.warning("Please provide an image first")
+  # import PIL.Image
   
-  if img is not None:
-    img_file = io.BytesIO(img.getvalue())
-    image = PIL.Image.open(img_file)
-    st.write("Image dimensions:", image.size)
-    st.write("Image mode:", image.mode)
+  # if img is not None:
+  #   img_file = io.BytesIO(img.getvalue())
+  #   image = PIL.Image.open(img_file)
+  #   st.write("Image dimensions:", image.size)
+  #   st.write("Image mode:", image.mode)
+    if st.button('Review Image'):
+      if img is not None:
+        st.write("Image Details:")
+        st.write(f"Format: {img.type}")
+        st.write(f"Size: {img.size} bytes}")
+        if method == 'Upload a picture':
+          st.write(f"Filename: {img.name}")
+        st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
+      else:
+        st.warning("Please provide an image first")
 st.subheader("Selecting Model")
 model = st.selectbox('Select Model',options=['VGG16','ResNet50','InceptionV3'])
 
