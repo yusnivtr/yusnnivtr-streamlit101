@@ -56,7 +56,9 @@ with col2:
     else:
       st.warning("Please provide an image first")
 st.subheader("Selecting Model")
-model = st.selectbox('Select Model',options=['VGG16','ResNet50','InceptionV3'])
+col1, col2 = st.columns([1, 3])
+with col1:
+  model = st.selectbox('Select Model',options=['VGG16','ResNet50','InceptionV3'])
 
 st.subheader("Output")
 
