@@ -14,6 +14,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code fr
 st.header("Starting Image Retrieval Program")
 
 with st.expander("Upload Image"):
-    st.columns('Take a picture','Upload a file')
-    col1, col2 = st.columns(2)
+    col1,col2 = st.columns(2,vertical_alignment='center')
+    col1.button('Take a photo',use_container_width=True)
+    col2.button('Upload a photo',use_container_width=True)
   
