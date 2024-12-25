@@ -10,6 +10,16 @@ hide_streamlit_style = """
   </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) # hide the CSS code from the screen as they are embedded in markdown text. Also, allow streamlit to unsafely process as HTML
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://deadline.com/wp-content/uploads/2021/02/hatsune-miku.jpg");
+    }
+   </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("Image Retrieval Program")
 st.info("Hehe")
