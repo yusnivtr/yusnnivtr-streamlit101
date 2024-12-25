@@ -63,7 +63,7 @@ with col2:
       if img is not None:
         st.write("Image Details:")
         st.write(f"Format: {img.type}")
-        st.write(f"Size: {img.size} bytes}")
+        st.write(f"Size: {img.size} bytes")
         if method == 'Upload a picture':
           st.write(f"Filename: {img.name}")
         st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
