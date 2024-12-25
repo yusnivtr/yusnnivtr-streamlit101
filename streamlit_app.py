@@ -30,5 +30,5 @@ with st.expander("Input Image"):
       img = st.file_uploader('Upload a picture')
       
   if img:
-    st.image(img, caption='Uploaded Image', width=800)
+    st.image(img, caption='Uploaded Image', width=500,use_container_width=True)
 
