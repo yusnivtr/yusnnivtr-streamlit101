@@ -14,7 +14,7 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 st.title("Image Retrieval Program")
 st.info("Hehe")
     
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([1, 3])
 
 method = 'Take a picture'
 
