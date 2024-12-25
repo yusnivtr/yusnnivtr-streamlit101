@@ -14,21 +14,26 @@ st.set_page_config(page_title="Image Retrieval Program", page_icon=":shark:", la
 st.title("Image Retrieval Program")
 st.info("Hehe")
 
-with st.expander("Input Image"):
-  col1, col2 = st.columns([1, 3])
+st.subheader("Input Image")
+col1, col2 = st.columns([1, 3])
 
-  method = 'Take a picture'
+method = 'Take a picture'
 
-  with col1:
-    method = st.radio('Select Input method',options=['Take a picture','Upload a picture'])
+with col1:
+  method = st.radio('Select Input method',options=['Take a picture','Upload a picture'])
+  
+with col2:
+  if method == 'Take a picture':
+    enable = st.checkbox('Enable Camera')
+    img = st.camera_input('Take a picture',disabled= not enable)
+  else:
+    img = st.file_uploader('Upload a picture')
     
-  with col2:
-    if method == 'Take a picture':
-      enable = st.checkbox('Enable Camera')
-      img = st.camera_input('Take a picture',disabled= not enable)
-    else:
-      img = st.file_uploader('Upload a picture')
-      
-  if img:
-    st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
+if img:
+  st.image(img, caption='Uploaded Image', width=200,use_container_width=True)
+  
+st.subheader("Selecting Model")
+model = st.selectbox('Select Model',options=['VGG16','ResNet50','InceptionV3'])
+
+st.subheader("Output")
 
