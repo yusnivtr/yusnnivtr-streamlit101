@@ -1,5 +1,4 @@
 import streamlit as st
-st.title("🎈 Image Retrieve Model")
 # enable = st.checkbox('Use camera?')
 # image = st.camera_input("Take a picture",disabled = not enable)
 # if image:
